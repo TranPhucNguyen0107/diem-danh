@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Điểm danh Chúa Nhật — Nhập</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="attendance">
+  <header class="site-header">
+    <div class="wrap">
+      <h1>🙏 Điểm danh Chúa Nhật</h1>
+      <nav class="nav">
+        <a href="stats.html">📊 Thống kê</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="controls">
+      <label for="attendance-date">Ngày (mặc định: Chủ Nhật gần nhất)</label>
+      <input id="attendance-date" type="date" />
+      <div class="help">Chọn ngày Chúa Nhật để điểm danh. Mỗi ngày lưu 1 document.</div>
+    </section>
+
+    <section class="table-wrap">
+      <table id="attendance-table">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên Thánh</th>
+            <th>Họ</th>
+            <th>Tên</th>
+            <th colspan="3">⛪ Đi lễ</th>
+            <th colspan="2">📚 Đi học</th>
+          </tr>
+          <tr class="sub">
+            <th></th><th></th><th></th><th></th>
+            <th>Sớm</th><th>Có mặt</th><th>Trễ</th>
+            <th>Có mặt</th><th>Vắng</th>
+          </tr>
+        </thead>
+        <tbody id="attendance-body"></tbody>
+      </table>
+    </section>
+
+    <section class="actions">
+      <button id="saveBtn" class="btn primary">💾 Lưu điểm danh</button>
+      <button id="clearBtn" class="btn">🧹 Xóa chọn (UI)</button>
+      <div id="msg" class="msg"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© 2025 Quản lý điểm danh — trắng • vàng • cam pastel</div>
+  </footer>
+<!-- Popup thông báo -->
+<!-- POPUP THÔNG BÁO -->
+<!-- Popup thông báo -->
+<div id="popup">
+  <div class="popup-box">
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+  </div>
+</div>
+
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
